@@ -5,7 +5,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only -r dotenv/config src/app.ts"
   },
   "devDependencies": {
     "@types/config": "^0.0.40",
@@ -23,7 +23,7 @@
     "argon2": "^0.28.3",
     "config": "^3.3.6",
     "dayjs": "^1.10.7",
-    "dotenv": "^10.0.0",
+    "dotenv": "^16.3.1",
     "express": "^5.0.0-alpha.8",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
