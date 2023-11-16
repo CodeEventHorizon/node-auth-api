@@ -1,0 +1,8 @@
+{
+  "name": "node-auth-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CodeEventHorizon/node-auth-api",
+  "author": "Nikoloz Muladze <nikoloz.9374@gmail.com>",
+  "license": "MIT"
+}
