@@ -3,10 +3,10 @@ export default {
   dbUri: process.env.DB_URI,
   logLevel: "info",
   smtp: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    secure: process.env.SMTP_SECURE,
+    user: process.env.SMTP_USER as string,
+    pass: process.env.SMTP_PASS as string,
+    host: process.env.SMTP_HOST as string,
+    port: 587,
+    secure: false,
   },
 };
