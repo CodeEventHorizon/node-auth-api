@@ -2,6 +2,8 @@ export default {
   port: parseInt(process.env.PORT || "3000") as number,
   dbUri: process.env.DB_URI as string,
   logLevel: "info" as const,
+  accessTokenPrivateKey: "",
+  refreshTokenPrivateKey: "",
   smtp: {
     user: process.env.SMTP_USER as string,
     pass: process.env.SMTP_PASS as string,
