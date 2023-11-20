@@ -13,6 +13,7 @@ import {
   resetPasswordHandler,
   verifyUserHandler,
 } from "../controller/user.controller";
+import requireUser from "../middleware/requireUser";
 
 const router = express.Router();
 
@@ -40,6 +41,6 @@ router.post(
   resetPasswordHandler
 );
 
-router.get("/api/users/me", getCurrentUserHandler);
+router.get("/api/users/me", requireUser, getCurrentUserHandler);
 
 export default router;
