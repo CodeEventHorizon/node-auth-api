@@ -3,11 +3,13 @@ import validateResource from "../middleware/validateResource";
 import {
   createUserSchema,
   forgotPasswordSchema,
+  resetPasswordSchema,
   verifyUserSchema,
 } from "../schema/user.schema";
 import {
   createUserHandler,
   forgotPasswordHandler,
+  resetPasswordHandler,
   verifyUserHandler,
 } from "../controller/user.controller";
 
@@ -29,6 +31,12 @@ router.post(
   "/api/users/forgotpassword",
   validateResource(forgotPasswordSchema),
   forgotPasswordHandler
+);
+
+router.post(
+  "/api/users/resetpassword/:id/:passwordResetCode",
+  validateResource(resetPasswordSchema),
+  resetPasswordHandler
 );
 
 export default router;
