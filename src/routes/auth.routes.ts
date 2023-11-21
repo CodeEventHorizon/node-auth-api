@@ -1,10 +1,17 @@
+// Modules
 import express from "express";
-import validateResource from "../middleware/validateResource";
+
+// Schemas
 import { createSessionSchema } from "../schema/auth.schema";
+
+// Controllers
 import {
   createSessionHandler,
   refreshAccessTokenHandler,
 } from "../controller/auth.controller";
+
+// Middlewares
+import validateResource from "../middleware/validateResource";
 
 const router = express.Router();
 

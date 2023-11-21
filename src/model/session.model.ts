@@ -1,4 +1,7 @@
+// Modules
 import { Ref, getModelForClass, prop } from "@typegoose/typegoose";
+
+// Models
 import { User } from "./user.model";
 
 export class Session {

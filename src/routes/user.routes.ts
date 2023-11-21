@@ -1,11 +1,15 @@
+// Modules
 import express from "express";
-import validateResource from "../middleware/validateResource";
+
+// Schemas
 import {
   createUserSchema,
   forgotPasswordSchema,
   resetPasswordSchema,
   verifyUserSchema,
 } from "../schema/user.schema";
+
+// Controllers
 import {
   createUserHandler,
   forgotPasswordHandler,
@@ -13,6 +17,9 @@ import {
   resetPasswordHandler,
   verifyUserHandler,
 } from "../controller/user.controller";
+
+// Middlewares
+import validateResource from "../middleware/validateResource";
 import requireUser from "../middleware/requireUser";
 
 const router = express.Router();
