@@ -1,5 +1,7 @@
+// Modules
 import { object, string, TypeOf } from "zod";
 
+// Schemas
 export const createUserSchema = object({
   body: object({
     firstName: string({
@@ -56,6 +58,7 @@ export const resetPasswordSchema = object({
   }),
 });
 
+// Inputs
 export type CreateUserInput = TypeOf<typeof createUserSchema>["body"];
 
 export type VerifyUserInput = TypeOf<typeof verifyUserSchema>["params"];

@@ -1,5 +1,7 @@
+// Modules
 import { object, string, TypeOf } from "zod";
 
+// Schemas
 export const createSessionSchema = object({
   body: object({
     email: string({
@@ -11,4 +13,5 @@ export const createSessionSchema = object({
   }),
 });
 
+// Inputs
 export type CreateSessionInput = TypeOf<typeof createSessionSchema>["body"];
